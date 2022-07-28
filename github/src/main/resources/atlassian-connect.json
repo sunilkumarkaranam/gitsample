@@ -1,0 +1,26 @@
+{
+  "key": "${addon.key}",
+  "baseUrl": "${addon.base-url}",
+  "name": "github",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+  "scopes": ["READ"],
+  "modules": {
+    "webPanels": [
+      {
+        "url": "/main?issueKey={issue.key}",
+        "location": "atl.jira.view.issue.right.context",
+       
+        "name": {
+          "value": "Github"
+        },
+        "key": "sunil-reminder-web-right-panel"
+      }
+    ]
+  }
+}
